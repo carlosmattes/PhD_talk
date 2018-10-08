@@ -1,0 +1,104 @@
+\documentclass[preview,border=4mm,convert={density=600,outext=.png}]{standalone}
+ 
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{color}
+\usetikzlibrary{shapes, arrows, calc, backgrounds, decorations.text}
+
+\def\Arc(#1:#2:#3) { \path[draw]
+         ($({#3*cos(#1)},{#3*sin(#1)})$) arc (#1:#2:#3); }
+         
+\def\textInArc[#1](#2:#3:#4) { \path[draw, postaction={decorate,
+            decoration={text effects along path,
+            #1, text align=center,
+            text effects/.cd, text along path, 
+            every character/.style={fill=white, yshift=-0.5ex}}}]
+         ($({#4*cos(#2)},{#4*sin(#2)})$) arc (#2:#3:#4); }
+
+\def\textAsArc[#1](#2:#3:#4) { \path[decorate,
+            decoration={text along path,
+            #1, text align=center}]
+         ($({#4*cos(#2)},{#4*sin(#2)})$) arc (#2:#3:#4); }
+
+\begin{document}
+
+\begin{tikzpicture}
+       \tikzstyle{block} = [rectangle,text width=2.5cm, text centered]
+       \textAsArc[text={composition:}](90:45:7)
+       \textAsArc[text={burning:}](45:0:7)
+       \Arc(90:0:6.75)
+       \path[draw,dashed] (-0.25,6.75) -- (0,6.75);
+       \textAsArc[text={$^{1}$H $\;{}^{4}$He}{}](90:45:6.25)
+       \Arc(90:45:6)
+       \path[draw,dashed] (-0.25,6) -- (0,6);
+       \textInArc[text={\ H $\rightarrow$ He\ }{}](45:0:6)
+       \textAsArc[text={$^{4}$He}{}](90:45:5.5)
+       \Arc(90:45:5.25)
+       \path[draw,dashed] (-0.25,5.25) -- (0,5.25);
+       \textInArc[text={\ He $\rightarrow$ C, O\ }{}](45:0:5.25)
+       \textAsArc[text={$^{12}$C $\;{}^{16}$O}{}](90:45:4.75)
+       \Arc(90:45:4.5)
+       \path[draw,dashed] (-0.25,4.5) -- (0,4.5);
+       \textInArc[text={\ C $\rightarrow$ Ne, Mg\ }{}](45:0:4.5)
+       %\textAsArc[text={$^{16}$O $\;{}^{20}$Ne $\;{}^{24}$Mg}{}](90:45:3.75)
+       \node[rotate=-10,text align=center] at 
+             ($({4*cos(90-10)},{4*sin(90-10)})$) {{$^{16}$O}{}};
+       \node[rotate=-22.5,text align=center] at 
+             ($({4*cos(90-22.5)},{4*sin(90-22.5)})$) {{$^{20}$Ne}{}};
+       \node[rotate=-35,text align=center] at 
+             ($({4*cos(90-35)},{4*sin(90-35)})$) {{$^{24}$Mg}{}};
+       \Arc(90:45:3.5)
+       \path[draw,dashed] (-0.25,3.5) -- (0,3.5);
+       \textInArc[text={\ Ne $\rightarrow$ O, Mg\ }{}](45:0:3.5)
+       %\textAsArc[text={$^{16}$O $\;{}^{24}$Mg $\;{}^{28}$Si}{}](90:45:2.75)
+       \node[rotate=-7.5,text align=center] at 
+             ($({3.125*cos(90-7.5)},{3.125*sin(90-7.5)})$) {{$^{16}$O}{}};
+       \node[rotate=-22.5,text align=center] at 
+             ($({3.125*cos(90-22.5)},{3.125*sin(90-22.5)})$) {{$^{24}$Mg}{}};
+       \node[rotate=-37.5,text align=center] at 
+             ($({3.125*cos(90-37.5)},{3.125*sin(90-37.5)})$) {{$^{28}$Si}{}};
+       \Arc(90:45:2.75)
+       \path[draw,dashed] (-0.25,2.75) -- (0,2.75);
+       \textInArc[text={\ O $\rightarrow$ Si\ }{}](45:0:2.75)
+       \textAsArc[text={$^{28}$S $\;{}^{32}$S}{}](90:45:2.125)
+       \path[draw, dashed] (0,1.75) arc (90:45:1.75);
+       \textInArc[text={\ Si $\rightarrow$\ }{}](45:0:1.75)
+       \textAsArc[text={Fe, Ni}{}](45:0:1.25)
+       \textAsArc[text={iron}{}](90:45:1.25)
+       \textAsArc[text={core}{}](90:45:1.0)
+       \path[draw,dashed] (-0.25,0) -- (0,0);
+       % lines
+       \path[draw, dashed]
+         (0,0) -- ($({7.25*cos(45)},{7.25*sin(45)})$);
+       \path[draw] (0,0) -- (0,6.75);
+       \path[draw] (0,0) -- (6.75,0);
+       % masses
+       \node[text centered] at (-0.5,7) {{$\Delta m / M$}{}};
+       \node[text centered] at (-0.5,6.325) {{$0.60$}{}};
+       \node[text centered] at (-0.5,5.625) {{$0.10$}{}};
+       \node[text centered] at (-0.5,4.875) {{$0.05$}{}};
+       \node[text centered] at (-0.5,4) {{$0.15$}{}};
+       \node[text centered] at (-0.5,3.125) {{$0.02$}{}};
+       \node[text centered] at (-0.5,1.75) {{$0.08$}{}};
+       % temperature and density
+       \path[draw] (-1.25,-0.5) -- (6.75,-0.5);
+       \path[draw] (-0.375,-1) -- (-0.375,0);
+       \node[text centered] at (-0.825,-0.25) {{$\lg(T)$}{}};
+       \node[text centered] at (-0.825,-0.75) {{$\lg(\rho)$}{}};
+       \node[text centered] at (0,-0.25) {9.9};
+       \node[text centered] at (0,-0.75) {9.6};
+       \node[text centered] at (1.75,-0.25) {9.5};
+       \node[text centered] at (1.75,-0.75) {8.0};
+       \node[text centered] at (2.75,-0.25) {9.3};
+       \node[text centered] at (2.75,-0.75) {6.8};
+       \node[text centered] at (3.5,-0.25) {9.2};
+       \node[text centered] at (3.5,-0.75) {6.7};
+       \node[text centered] at (4.5,-0.25) {8.8};
+       \node[text centered] at (4.5,-0.75) {5.0};
+       \node[text centered] at (5.25,-0.25) {8.2};
+       \node[text centered] at (5.25,-0.75) {3.0};
+       \node[text centered] at (6,-0.25) {7};
+       \node[text centered] at (6,-0.75) {-2};
+\end{tikzpicture}
+ 
+\end{document}

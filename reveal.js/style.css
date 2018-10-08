@@ -1,0 +1,93 @@
+:root {
+    --main-txt-color: yellow;
+}
+
+.reveal {
+    color:var(--main-txt-color);
+}
+
+.reveal section h1 {
+    color:var(--main-txt-color);
+}
+
+.reveal section h2 {
+    color:var(--main-txt-color);
+}
+
+.reveal section h3 {
+    color:var(--main-txt-color);
+}
+
+.reveal section h4 {
+    color:var(--main-txt-color);
+}
+
+.reveal section img { 
+    background: rgba(0, 0, 0, 1); 
+    border: 2px solid #000000; 
+    box-shadow: none; 
+}
+
+body {
+	background-position: 50% 100%;
+	background-image: url(figs/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+    color:yellow;
+}
+
+ul.sponsors {
+	list-style: none;
+	text-align: center;
+}
+
+.sponsors li {
+	display: inline-block;
+    margin: 0 -25px -35px 0; 
+    vertical-align: top
+}
+
+.sponsors li img {
+    background: rgba(255, 255, 255, 0); 
+    border: 5px;
+    border-color: white;
+}
+
+figure {
+    display: inline-block;
+    border-color: transparent;
+}
+
+figure img {
+    border: none;
+}
+
+figure figcaption {
+    border: 1px;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: 0 0 ;
+}
+
+.column-left {
+    float: left;
+    width: 15%;
+    left: 0;
+    position: absolute;
+}
+.column-center {
+    width: 70%;
+    left: 14.5%;
+    display: inline-block; 
+    position: absolute;
+}
+.column-right {
+    float: right;
+    width: 15%;
+    right: 0;
+    position: absolute;
+}
