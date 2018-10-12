@@ -28,6 +28,12 @@
     box-shadow: none; 
 }
 
+.reveal .slide-number {
+  font-size: 1em;
+  color: var(--main-txt-color); 
+  margin-right: 3.5em
+}
+
 body {
 	background-position: 50% 100%;
 	background-image: url(figs/background.jpg);
@@ -39,11 +45,12 @@ body {
 ul.sponsors {
 	list-style: none;
 	text-align: center;
+    margin-left: 0.5em;
 }
 
 .sponsors li {
 	display: inline-block;
-    margin: 0 -25px -35px 0; 
+    margin: 0 -10px -35px 0; 
     vertical-align: top
 }
 
@@ -51,6 +58,18 @@ ul.sponsors {
     background: rgba(255, 255, 255, 0); 
     border: 5px;
     border-color: white;
+    margin-right: 2em;
+}
+
+ul.morespace {
+    text-align: left
+}
+.morespace li {
+    margin-top: 0.5em
+}
+
+div.shaded {
+    background: rgba(10, 0, 50, 0.75);
 }
 
 figure {
@@ -90,4 +109,30 @@ figure figcaption {
     width: 15%;
     right: 0;
     position: absolute;
+}
+
+.reveal table {
+    margin: auto;
+    border: 1px solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.reveal table th {
+    font-weight   : bold;
+    text-align    : left;
+    padding       : 0.2em 0.5em 0.2em 0.5em; /*top right bottom left */
+    border-bottom : 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: 0px solid;
+}
+
+.reveal table td {
+    text-align: left;
+    padding: 0.6em 0.5em 0.6em 0.5em; /*top right bottom left */
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: 0px solid;
+    border-bottom: 0px solid;
 }
