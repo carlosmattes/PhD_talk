@@ -192,18 +192,18 @@
                         <small>
                         <div class="shaded" style="text-align: left">
                             <div>
-                              <p><b>conservation equations</b></p>
+                              <p style="margin-left:1em"><b>conservation equations</b></p>
                               <div style="font-size: 0.9em; margin-top:-0.5em; text-align: left; width: 80%">
                                   \begin{align*}
-                                   \text{mass:} \;&\partial_t \rho + \partial_i (\rho v_i) = 0 \\
-                                   \text{momentum:} \;&\partial_t (\rho v_k) + \partial_i (\rho v_k v_i + \delta_{ik} P) = -\rho \partial_k \Phi_G + a_{\nu k} \\
-                                   \text{energy:} \;&\partial_t (\rho \epsilon) + \partial_i ([\rho \epsilon + P] v_i) = -\rho v_i \partial_i \Phi_G + q_\nu + v_i a_{\nu i} \\
-                                   \text{EoS:} \;&P  = P(\rho,\epsilon,\{X_i, \; i \in {1,\ldots,N_{\mathrm{nuc}}} \}) \to P(\rho,\epsilon,Y_e) \\
-                                   \text{leptons:} \;&\partial_t (\rho Y_e) + \partial_i (\rho Y_e v_i) = s_\nu
+                                   \text{mass:} \;& &\partial_t \rho + \partial_i (\rho v_i)  &= 0 \\
+                              \;\; \text{momentum:} \;& &\partial_t (\rho v_k) + \partial_i (\rho v_k v_i + \delta_{ik} P)  &= -\rho \partial_k \Phi_G + a_{\nu k} \\
+                                   \text{energy:} \;& &\partial_t (\rho \epsilon) + \partial_i ([\rho \epsilon + P] v_i)  &= -\rho v_i \partial_i \Phi_G + q_\nu + v_i a_{\nu i} \;\;\;\\
+                                   \text{EoS:} \;& &P  = P(\rho,\epsilon,\{X_i, \; i \in {1,\ldots,N_{\mathrm{nuc}}} \})  &\to P(\rho,\epsilon,Y_e) \\
+                                   \text{leptons:} \;& &\partial_t (\rho Y_e) + \partial_i (\rho Y_e v_i)  &= s_\nu
                                   \end{align*}
                               </div>
                             </div>
-                            <div class="fragment">
+                            <div class="fragment" style="margin-left:1em">
                             <p><b>solver</b></p>
                             <ul class="morespace" style="margin-top: -0.75em">
                                 <li>hydrodynamics code FLASH <span style="font-size:0.6em;line-height: 2.75em;">Fryxell et al. 2000, Dubey et al. 2009</span></li>
@@ -360,8 +360,8 @@
                             <br>
                             <ul class="morespace">
                                 <div class="shaded">
-                                <li>M1 has less convection in the center</li>
                                 <li>ASL has an initial heating deficit</li>
+                                <li>M1 has less convection in the center</li>
                                 </div>
                             </ul>
                         </small>
@@ -424,9 +424,9 @@
                                     </figcaption>
                                 </figure></center>
                             </div>
-                            <div style="float: left; width: 40%; left: 60%; position: absolute; font-size: 0.8em;">
+                            <div style="float: left; width: 40%; left: 60%; position: absolute; font-size: 0.8em; text-align: left;">
                                 <div class="shaded">
-                                <p><b>Summary after one second</b></p>
+                                <p><b>Summary after <br> one second</b></p>
                                 <ul class="morespace" style="margin-top: -0.3em">
                                         <li>ejecta cool fast</li>
                                         <li>extreme $Y_e$ values</li>
