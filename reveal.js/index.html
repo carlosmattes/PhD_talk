@@ -195,11 +195,11 @@
                               <p style="margin-left:1em"><b>conservation equations</b></p>
                               <div style="font-size: 0.9em; margin-top:-0.5em; text-align: left; width: 80%">
                                   \begin{align*}
-                                   \text{mass:} \;& &\partial_t \rho + \partial_i (\rho v_i)  &= 0 \\
-                              \;\; \text{momentum:} \;& &\partial_t (\rho v_k) + \partial_i (\rho v_k v_i + \delta_{ik} P)  &= -\rho \partial_k \Phi_G + a_{\nu k} \\
-                                   \text{energy:} \;& &\partial_t (\rho \epsilon) + \partial_i ([\rho \epsilon + P] v_i)  &= -\rho v_i \partial_i \Phi_G + q_\nu + v_i a_{\nu i} \;\;\;\\
-                                   \text{EoS:} \;& &P  = P(\rho,\epsilon,\{X_i, \; i \in {1,\ldots,N_{\mathrm{nuc}}} \})  &\to P(\rho,\epsilon,Y_e) \\
-                                   \text{leptons:} \;& &\partial_t (\rho Y_e) + \partial_i (\rho Y_e v_i)  &= s_\nu
+                                   \text{mass:} \;& &\partial_t \rho + \partial_i (\rho v_i)  &= 0 &\\
+                              \;\; \text{momentum:} \;& &\partial_t (\rho v_k) + \partial_i (\rho v_k v_i + \delta_{ik} P)  &= -\rho \partial_k \Phi_G + a_{\nu k} &\\
+                                   \text{energy:} \;& &\partial_t (\rho \epsilon) + \partial_i ([\rho \epsilon + P] v_i)  &= -\rho v_i \partial_i \Phi_G + q_\nu + v_i a_{\nu i} \;\;\; &\\
+                                   \text{EoS:} \;& &P  = P(\rho,\epsilon,\{X_i, \; i \in {1,\ldots,N_{\mathrm{nuc}}} \})  &\to P(\rho,\epsilon,Y_e) &\\
+                                   \text{leptons:} \;& &\partial_t (\rho Y_e) + \partial_i (\rho Y_e v_i)  &= s_\nu &
                                   \end{align*}
                               </div>
                             </div>
@@ -483,10 +483,10 @@
                     <center>
                     <div class="shaded" style="font-size: 0.8em; width:85%">
                     <ul class="morespace">
-                        <li>Implementation of ASL in FLASH</li>
-                        <li>First <em>controlled</em> neutrino transport comparison</li>
-                        <li>Long-time CCSN Application:<br>
-                            Late downflows lead to heavy neutron stars <br>
+                        <li>implementation of ASL in FLASH</li>
+                        <li>first <em>controlled</em> neutrino transport comparison</li>
+                        <li>long-time CCSN Application:<br>
+                            late downflows lead to heavy neutron stars <br>
                             (progenitor/2D artifact)</li>
                     </ul>
                     </div>
